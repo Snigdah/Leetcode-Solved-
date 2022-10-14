@@ -11,19 +11,27 @@
  */
 class Solution {
 public:
-    struct TreeNode* prev = NULL;
     void flatten(TreeNode* root) {
-        if(root == NULL){
-            return;
-        }
-        flatten(root->right);
-        flatten(root->left);
         
-
-        
-        root->right = prev;
-        root->left = NULL;
-        prev = root;
-        
+       TreeNode* ptr = root;
+        if(root!=NULL){
+            while( ptr!= NULL){
+           
+           if(ptr->left != NULL){
+               TreeNode *lt = ptr->left;
+               while(lt->right != NULL){
+                   lt = lt->right;
+               }
+               
+               lt->right = ptr->right;
+               ptr->right = ptr->left;
+               ptr->left = NULL;
+           }
+           
+           ptr = ptr->right;
+       } 
+            cout<<"Bangla"<<endl;
+    }
+       
     }
 };
