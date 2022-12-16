@@ -18,12 +18,12 @@ class Solution
             return 0;
         }
         
-        string temp1="";
+        string temp1;
         temp1.append(str1, 2, str1.size());
         temp1.append(str1, 0,2);
         
         
-        string temp2 = "";
+        string temp2;
         temp2.append(str1, str1.size()-2, str1.size());
         temp2.append(str1, 0 , str1.size()-2);
         //cout<<temp2<<endl;
