@@ -5,6 +5,9 @@ using namespace std;
 // } Driver Code Ends
 class Solution{
     public:
+    static bool cmp(pair<int, int> &a, pair<int, int> &b){
+        return a.first<b.first;
+    }
     vector<pair<int,int>> allPairs(int A[], int B[], int n, int m, int X)
     {
          vector<pair<int, int>> ans;
@@ -23,7 +26,7 @@ class Solution{
             }
         }
     
-    sort(ans.begin(), ans.end());
+    sort(ans.begin(), ans.end(), cmp);
         
         return ans;
     }
