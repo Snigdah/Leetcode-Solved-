@@ -26,7 +26,7 @@ class Solution{
             }
         }
     
-    sort(ans.begin(), ans.end(), cmp);
+    sort(ans.begin(), ans.end());
         
         return ans;
     }
